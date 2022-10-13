@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button {
+  width: auto;
+}
+
+.App{
+  text-align: center;
+}
+
+.sudoku{
+  background-image: linear-gradient(to right bottom,rgb(2, 16, 30),rgb(32, 164, 207));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+.heading{
+  border-color: 0;
+  padding-bottom: 3rem;
+}
+
+.input-field{
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* .tbody.nth-child(3n+1) {
+
+} */
+
+table{
+  border-collapse: collapse;
+  border: 1.5px solid black;
+  color: rgb(32, 164, 207);
+}
+
+tbody tr:nth-child(3n) {
+  border-bottom: 1.5px solid black;
+}
+
+tr td:nth-child(3n) {
+  border-right: 1.5px solid black;
+}
+
+#grid-result {
+  padding-top: 2rem;
+  width: 100%;
+  min-height: 5vh;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.arrowMove {
+  display: inline-block;
+  transition: 0.2s;
+  position: relative;
+  color: white;
+  background: none;
+  content: "";
+  border: 0;
+  text-align: left;
+  padding-left: 50px;
+  font-weight: 700;
+}
+
+.arrowMove > p {
+  margin-block: 10px;
+  position: relative;
+  top: 0;
+}
+
+.arrowMove .arrowMoveSecondText {
+  display: none;
+}
+
+.icon.arrow {
+  position: absolute;
+  border: 2px solid #1cb0c3;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+.icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  border-top: 0.125rem solid #1cb0c3;
+  border-right: 0.125rem solid #1cb0c3;
+  transform: rotate(45deg);
+}
+
+.arrowMove:hover {
+  padding-left: 20px;
+  transform: translateX(-40%);
+}
+
+.arrowMove:hover .icon.arrow {
+  width: 150px;
+}
+
+.arrowMove:hover .arrowMoveFirstText {
+  display: none;
+}
+
+.arrowMove:hover .arrowMoveSecondText {
+  display: block;
+}
+
+
+td {
+  padding: 0;
+}
+
+.btn-solve {
+  margin-top: 2%;
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.success, .success::after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
