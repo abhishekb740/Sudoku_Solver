@@ -96,6 +96,12 @@ button:hover{
   top: 0;
   transition: 0.3s;
 }
+.grid-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .icon.arrow::before {
   position: absolute;
@@ -160,6 +166,13 @@ td {
   }
 
 }
+
+@media (max-width: 400px){
+  table{
+    scale: 0.57;
+  }
+}
+
 
 @media (max-width: 280px){
   table{
