@@ -39,10 +39,6 @@ button {
   border: 1px solid black;
 }
 
-/* .tbody.nth-child(3n+1) {
-
-} */
-
 table{
   border-collapse: collapse;
   border: 1.5px solid black;
@@ -146,4 +142,39 @@ td {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  
+  table{
+    scale: 0.7;
+  }
+}
+
+@media (max-height: 600px){
+  table{
+    scale: 0.8;
+  }
+  .heading{
+    padding-bottom: 0;
+  }
+
+}
+
+@media (max-width: 280px){
+  table{
+    scale: 0.55;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .heading{
+    padding-bottom: 0;
+  }
+  .grid-container{
+    margin: 0;
+    padding: 0;
+  }
 }
