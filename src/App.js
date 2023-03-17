@@ -9,8 +9,11 @@ function App() {
   const [sudokuGrid, setSudokuGrid] = useState(
     Array.from(new Array(9), (a, b) => Array.from(new Array(9), (a, b) => 0))
   );
-  const [sudokuIsValid, setSudokuIsValid] = useState(checkSudokuIsValid(sudokuGrid))
-  const handleSudokuIsValid = () => setSudokuIsValid(checkSudokuIsValid(sudokuGrid))
+  const [sudokuIsValid, setSudokuIsValid] = useState(
+    checkSudokuIsValid(sudokuGrid)
+  );
+  const handleSudokuIsValid = () =>
+    setSudokuIsValid(checkSudokuIsValid(sudokuGrid));
 
   const clearGrid = () => {
     setSudokuGrid(
@@ -43,14 +46,14 @@ function App() {
       handleSetSudokuGrid(+_id[0], +_id[1], "");
       e.target.value = "";
     }
-    handleSudokuIsValid()
+    handleSudokuIsValid();
   };
 
   const handleSolveButton = async (event) => {
-    handleSudokuIsValid()
-    if(!sudokuIsValid) {
-      alert("Invalid sudoku grid.\nPlease check and resolve.")
-      return
+    handleSudokuIsValid();
+    if (!sudokuIsValid) {
+      alert("Invalid sudoku grid.\nPlease check and resolve.");
+      return;
     }
     const res = await (
       await fetch("/solve?data=" + JSON.stringify(sudokuGrid), {

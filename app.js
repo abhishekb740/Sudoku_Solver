@@ -60,7 +60,6 @@ function sudokuSolver(sudoku) {
 }
 
 app.post("/solve", async (req, res) => {
-  console.log("fetch Working?");
   const sudoku = JSON.parse(req.query.data);
   var state = sudokuSolver(sudoku);
   if (!sudoku) {
